@@ -44,6 +44,8 @@ To run tests, run the following command
 ## Testing
 * Write more unit test to include coverage using Jest and React Testing Library for both unit and integration tests.
 * Create End to End tests 
+* Setup Wallaby JS for realtime testing
+* Integrate unit test coverage into pipeline and enforce code coverage percentage
 
 ## Code Quality and Maintainability
 * TypeScript Integration: Adopt TypeScript for type safety and improved developer experience.
