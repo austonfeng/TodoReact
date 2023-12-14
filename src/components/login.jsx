@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './style.css';
 import { v4 as uuid } from "uuid";
+import { validateCredentials } from './authUtils'; 
 
 const LoginForm = () => {
   const navigate = useNavigate();
@@ -10,15 +11,12 @@ const LoginForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    if (username === 'testuser@gamil.com' && password === '123') {
-      // Navigate to the '/App' route upon successful login
-      navigate('/App');
-    } else {
-      // Handle invalid credentials
-      console.log('Invalid credentials');
-      //console.log(uuid());
-    }
+    
+      if (validateCredentials(username, password)) {
+        navigate('/App');
+      } else {
+        console.log('Invalid credentials');
+      }
 
   };
 
